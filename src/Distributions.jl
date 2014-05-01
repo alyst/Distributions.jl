@@ -59,7 +59,8 @@ export
     Hypergeometric,
     InverseWishart,
     InverseGamma,
-    InverseGaussian,  
+    InverseGaussian,
+    InverseWeibull,
     IsoNormal,
     IsoNormalCanon,  
     Kolmogorov,
@@ -254,6 +255,7 @@ include(joinpath("univariate", "gumbel.jl"))
 include(joinpath("univariate", "hypergeometric.jl"))
 include(joinpath("univariate", "inversegamma.jl"))
 include(joinpath("univariate", "inversegaussian.jl"))
+include(joinpath("univariate", "inverseweibull.jl"))
 include(joinpath("univariate", "kolmogorov.jl"))
 include(joinpath("univariate", "ksdist.jl"))
 include(joinpath("univariate", "ksonesided.jl"))

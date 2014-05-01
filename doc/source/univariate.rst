@@ -193,6 +193,7 @@ List of Distributions
     - :ref:`gumbel`
     - :ref:`inversegamma`
     - :ref:`inversegaussian`
+    - :ref:`inverseweibull`
     - :ref:`laplace`
     - :ref:`levy`
     - :ref:`logistic`
@@ -546,6 +547,27 @@ The probability density function of an `inverse Gaussian distribution <http://en
   
     InverseGaussian()              # Inverse Gaussian distribution with unit mean and unit shape    
     InverseGaussian(mu, lambda)    # Inverse Gaussian distribution with mean mu and shape lambda
+
+
+.. _inverseweibull:
+
+Inverse Weibull Distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The probability density function of an `inverse Weibull distribution (see D.N.P.Murthy et al, "Weibull Model", John Wiley & Sons, NY, 2004)`_ with shape k and scale θ is 
+
+.. math::
+
+    f(x; k, \theta) = \frac{k}{\theta} \left( \frac{\theta}{x} \right)^{k+1} e^{-(\theta/x)^k},
+    \quad x \ge 0
+
+If ``Z`` is Weibull distribution with shape k and scale θ, then ``X = 1/Z`` follows inverse Weibull distribution with shape k and scale ``1/θ``.
+
+.. code-block:: julia
+
+    InverseWeibull(k)       # Inverse Weibull distribution with shape k and unit scale
+    InverseWeibull(k, s)    # Inverse Weibull distribution with shape k and scale s
+
 
 .. _laplace:
 
